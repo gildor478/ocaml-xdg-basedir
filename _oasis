@@ -1,0 +1,49 @@
+OASISFormat: 0.2
+Name:        ocaml-xdg-basedir
+Version:     0.0.1
+Authors:     Sylvain Le Gall
+Copyrights:  (C) 2010 OCamlCore SARL
+License:     LGPL-2.1 with OCaml linking exception
+Plugins:     DevFiles (0.2), META (0.2), StdFiles (0.2)
+BuildTools:  ocamlbuild
+
+Synopsis:    XDG basedir location for data/cache/configuration files
+Description:
+  This library implements the xdg-basedir specification. It helps to define
+  standard locations for configuration, cache and data files in the user
+  directory and on the system. 
+  .
+  It is a straightforward implementation on UNIX platform and try to apply
+  consistent policies with regard to Windows directories.
+  .
+  It is inspired by the Haskell implementation of this specification, and it
+  follows the same choices for Windows directories.
+  .
+  [The xdg-basedir specification](http://standards.freedesktop.org/basedir-spec/basedir-spec-latest.html).
+  and 
+  [the Haskell implementation](http://github.com/willdonnelly/xdg-basedir)
+
+Library "xdg-basedir"
+  Path:       src
+  Modules:    XDGBaseDir
+  BuildDepends: fileutils, unix
+  
+Executable test
+  Path:       test
+  MainIs:     test.ml
+  Install:    false
+  BuildDepends: xdg-basedir, oUnit, fileutils
+  
+Test main
+  Command: $test
+  
+Document api
+  Title:                API reference for XDGBaseDir
+  InstallDir:           $docdir
+  Format:               HTML
+  Index:                index.html
+  Type:                 ocamlbuild
+  BuildTools+:          ocamldoc
+  XOCamlbuildLibraries: xdg-basedir
+  XOCamlbuildPath:      src/
+  
