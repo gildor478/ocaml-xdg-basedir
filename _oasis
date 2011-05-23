@@ -4,6 +4,7 @@ Version:     0.0.1
 Authors:     Sylvain Le Gall
 Copyrights:  (C) 2010 OCamlCore SARL
 License:     LGPL-2.1 with OCaml linking exception
+LicenseFile: COPYING.txt
 Plugins:     DevFiles (0.2), META (0.2), StdFiles (0.2)
 BuildTools:  ocamlbuild
 Homepage:    http://oasis.ocamlcore.org/view/ocaml-xdg-basedir
