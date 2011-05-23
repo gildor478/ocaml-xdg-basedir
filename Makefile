@@ -36,3 +36,6 @@ setup.data:
 .PHONY: build doc test all install uninstall reinstall clean distclean configure
 
 # OASIS_STOP
+
+sync: doc
+	rsync -av --delete api.docdir/* ssh.ocamlcore.org:/home/groups/xdg-basedir/htdocs/api/

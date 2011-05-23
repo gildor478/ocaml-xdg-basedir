@@ -6,6 +6,7 @@ Copyrights:  (C) 2010 OCamlCore SARL
 License:     LGPL-2.1 with OCaml linking exception
 Plugins:     DevFiles (0.2), META (0.2), StdFiles (0.2)
 BuildTools:  ocamlbuild
+Homepage:    http://oasis.ocamlcore.org/browse?pkg=ocaml-xdg-basedir
 
 Synopsis:    XDG basedir location for data/cache/configuration files
 Description:
@@ -22,6 +23,8 @@ Description:
   [The xdg-basedir specification](http://standards.freedesktop.org/basedir-spec/basedir-spec-latest.html).
   and 
   [the Haskell implementation](http://github.com/willdonnelly/xdg-basedir)
+  and 
+  [the API of this implementation](http://xdg-basedir.forge.ocamlcore.org/api).
 
 Library "xdg-basedir"
   Path:       src
@@ -39,7 +42,6 @@ Test main
   
 Document api
   Title:                API reference for XDGBaseDir
-  InstallDir:           $docdir
   Format:               HTML
   Index:                index.html
   Type:                 ocamlbuild
@@ -47,3 +49,7 @@ Document api
   XOCamlbuildLibraries: xdg-basedir
   XOCamlbuildPath:      src/
   
+SourceRepository head
+  Type: darcs
+  Location: https://forge.ocamlcore.org/anonscm/darcs/xdg-basedir/ocaml-xdg-basedir/
+  Browser: http://darcs.ocamlcore.org/cgi-bin/darcsweb.cgi?r=xdg-basedir/ocaml-xdg-basedir;a=summary
