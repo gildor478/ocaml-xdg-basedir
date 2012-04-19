@@ -1,5 +1,5 @@
 (* OASIS_START *)
-(* DO NOT EDIT (digest: 36e8f2fc8d0d2a69cf5e147ea49afa2b) *)
+(* DO NOT EDIT (digest: bd9d69429287178fc46eb8b7e1755018) *)
 This is the README file for the ocaml-xdg-basedir distribution.
 
 (C) 2010 OCamlCore SARL
@@ -19,8 +19,13 @@ follows the same choices for Windows directories.
 [The xdg-basedir
 specification](http://standards.freedesktop.org/basedir-spec/basedir-spec-latest.html).
 and [the Haskell implementation](http://github.com/willdonnelly/xdg-basedir)
+and [the API of this
+implementation](http://xdg-basedir.forge.ocamlcore.org/api).
 
-See the files INSTALL.txt for building and installation instructions. 
+See the files INSTALL.txt for building and installation instructions. See the
+file COPYING.txt for copying conditions. 
+
+Home page: http://oasis.ocamlcore.org/view/ocaml-xdg-basedir
 
 
 (* OASIS_STOP *)
