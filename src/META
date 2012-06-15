@@ -20,8 +20,8 @@
 ################################################################################
 
 # OASIS_START
-# DO NOT EDIT (digest: cdacf0612101a8be013ddd3c8ddeb921)
-version = "0.0.2"
+# DO NOT EDIT (digest: b0225083be81ce94e34b6d7082667684)
+version = "0.0.3"
 description = "XDG basedir location for data/cache/configuration files"
 requires = "fileutils unix"
 archive(byte) = "xdg-basedir.cma"

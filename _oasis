@@ -1,6 +1,6 @@
 OASISFormat: 0.2
 Name:        ocaml-xdg-basedir
-Version:     0.0.2
+Version:     0.0.3
 Authors:     Sylvain Le Gall
 Copyrights:  (C) 2010 OCamlCore SARL
 License:     LGPL-2.1 with OCaml linking exception
@@ -45,7 +45,7 @@ Document api
   Title:                API reference for XDGBaseDir
   Format:               HTML
   Index:                index.html
-  Type:                 ocamlbuild
+  Type:                 ocamlbuild (0.3)
   BuildTools+:          ocamldoc
   XOCamlbuildLibraries: xdg-basedir
   XOCamlbuildPath:      src/
