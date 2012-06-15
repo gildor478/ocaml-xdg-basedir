@@ -114,3 +114,5 @@
 ^setup.data$
 ^setup.log$
 ^_build$
+^ocaml-xdg-basedir.*\.tar\.gz$
+^ocaml-xdg-basedir.*\.tar\.gz.asc$
