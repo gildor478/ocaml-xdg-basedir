@@ -1,14 +1,16 @@
 (* OASIS_START *)
-(* DO NOT EDIT (digest: a84108da19d8bfe9089a4c750b36a6c5) *)
+(* DO NOT EDIT (digest: efd7ef2ce5060b12df7180a4eef570b9) *)
+
 This is the INSTALL file for the ocaml-xdg-basedir distribution.
 
 This package uses OASIS to generate its build system. See section OASIS for
-full information. 
+full information.
 
 Dependencies
 ============
 
 In order to compile this package, you will need:
+
 * ocaml for all, test main, doc api
 * findlib
 * fileutils
@@ -25,7 +27,7 @@ Installing
 Uninstalling
 ============
 
-1. Go to the root of the package 
+1. Go to the root of the package
 2. Run 'ocaml setup.ml -uninstall'
 
 OASIS
