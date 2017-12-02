@@ -82,7 +82,7 @@ headache:
 # Deploy target
 #  Deploy/release the software.
 
-deploy: headache doc-dist
+deploy:
 	mkdir dist || true
 	admin-gallu-deploy --verbose \
 		--forge_upload --forge_group xdg-basedir --forge_package ocaml-xdg-basedir
