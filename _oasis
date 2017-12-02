@@ -1,13 +1,15 @@
-OASISFormat: 0.4
-Name:        ocaml-xdg-basedir
-Version:     0.0.3
-Authors:     Sylvain Le Gall
-Copyrights:  (C) 2010 OCamlCore SARL
-License:     LGPL-2.1 with OCaml linking exception
-LicenseFile: COPYING.txt
-Plugins:     DevFiles (0.2), META (0.2), StdFiles (0.2)
-BuildTools:  ocamlbuild
-Homepage:    http://oasis.ocamlcore.org/view/ocaml-xdg-basedir
+OASISFormat:   0.4
+Name:          ocaml-xdg-basedir
+Version:       0.0.3
+Authors:       Sylvain Le Gall
+Copyrights:    (C) 2010 OCamlCore SARL
+License:       LGPL-2.1 with OCaml linking exception
+LicenseFile:   COPYING.txt
+Plugins:       DevFiles (0.4), META (0.4), StdFiles (0.4)
+BuildTools:    ocamlbuild
+Homepage:      https://github.com/gildor478/ocaml-xdg-basedir
+BugReports:	   https://github.com/gildor478/ocaml-xdg-basedir/issues
+AlphaFeatures: stdfiles_markdown
 
 Synopsis:    XDG basedir location for data/cache/configuration files
 Description:
@@ -51,6 +53,6 @@ Document api
   XOCamlbuildPath:      src/
 
 SourceRepository head
-  Type: darcs
-  Location: https://forge.ocamlcore.org/anonscm/darcs/xdg-basedir/ocaml-xdg-basedir/
-  Browser: http://darcs.ocamlcore.org/cgi-bin/darcsweb.cgi?r=xdg-basedir/ocaml-xdg-basedir;a=summary
+  Type: git
+  Location: https://github.com/gildor478/ocaml-xdg-basedir.git
+  Browser: https://github.com/gildor478/ocaml-xdg-basedir/

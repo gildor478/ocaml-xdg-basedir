@@ -64,9 +64,34 @@ configure:
 sync: doc
 	rsync -av --delete api.docdir/* ssh.ocamlcore.org:/home/groups/xdg-basedir/htdocs/api/
 
-headache:
-	find ./ -name _darcs -prune -false -o -name _build -prune -false \
-	  -o -type f \
-	  | xargs headache -h _header -c _headache.config
+.PHONY: sync
 
-.PHONY: sync headache
+# Headache target
+#  Fix license header of file.
+
+headache:
+	find ./ \
+	  -name _darcs -prune -false \
+	  -o -name .git -prune -false \
+	  -o -name .svn -prune -false \
+	  -o -name _build -prune -false \
+	  -o -name dist -prune -false \
+	  -o -name '*[^~]' -type f \
+	  | xargs /usr/bin/headache -h _header -c _headache.config
+
+# Deploy target
+#  Deploy/release the software.
+
+deploy: headache doc-dist
+	mkdir dist || true
+	admin-gallu-deploy --verbose \
+		--forge_upload --forge_group xdg-basedir --forge_package ocaml-xdg-basedir
+	admin-gallu-oasis-increment
+	$(MAKE) distclean
+	$(MAKE) test
+	git commit -am "Update OASIS version."
+
+.PHONY: deploy
+
+.PHONY: headache
+
