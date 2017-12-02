@@ -1,6 +1,6 @@
 OASISFormat:   0.4
 Name:          ocaml-xdg-basedir
-Version:       0.0.3
+Version:       0.0.4
 Authors:       Sylvain Le Gall
 Copyrights:    (C) 2010 OCamlCore SARL
 License:       LGPL-2.1 with OCaml linking exception
