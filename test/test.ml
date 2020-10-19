@@ -22,17 +22,17 @@
 open OUnit
 open FileUtil
 open FilePath
-open XDGBaseDir
+open Xdg_basedir
 
-let mk_tmpdir () = 
- let tmpdir = 
+let mk_tmpdir () =
+ let tmpdir =
    Filename.temp_file "xdg-basedir" ".dir"
  in
    rm [tmpdir];
    mkdir tmpdir;
    tmpdir
 
-let bracket_xdg_env f = 
+let bracket_xdg_env f =
   bracket
     (fun () ->
        mk_tmpdir (),
@@ -55,18 +55,18 @@ let bracket_xdg_env f =
     (fun (dn1, dn2, dn3) ->
        rm ~recurse:true [dn1; dn2; dn3])
 
-let test_of_vector (nm, user_file, all_files) = 
+let test_of_vector (nm, user_file, all_files) =
   nm>::
   bracket_xdg_env
     (fun xdg_env ->
-       let xdg_env = 
+       let xdg_env =
          Some xdg_env
        in
-       let fn = 
+       let fn =
          user_file ?xdg_env ?exists:(Some false) "test.data"
        in
-       let assert_all_files ~msg exp = 
-         assert_equal 
+       let assert_all_files ~msg exp =
+         assert_equal
            ~msg
            ~printer:(String.concat "; ")
            exp
@@ -85,26 +85,26 @@ let test_of_vector (nm, user_file, all_files) =
            ~msg:"1 file"
            [fn])
 
-let tests = 
+let tests =
   "XDGBaseDir">:::
-  (List.map test_of_vector 
+  (List.map test_of_vector
      [
-       "data_home", 
-       Data.user_file, 
+       "data_home",
+       Data.user_file,
        Data.all_files;
 
-       "config_home", 
-       Config.user_file, 
+       "config_home",
+       Config.user_file,
        Config.all_files;
 
-       "cache_home", 
-       Cache.user_file, 
-       (fun ?xdg_env ?exists fn -> 
-          try 
+       "cache_home",
+       Cache.user_file,
+       (fun ?xdg_env ?exists fn ->
+          try
             [Cache.user_file ?xdg_env ?exists fn]
           with Not_found ->
             []);
      ])
 
-let _ =
-  run_test_tt_main tests
+let () =
+  ignore @@ run_test_tt_main tests

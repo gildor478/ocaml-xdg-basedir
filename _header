@@ -1,4 +1,4 @@
-xdg-basedir: XDG basedir location for data/cache/configuration files
+xdg_basedir: XDG basedir location for data/cache/configuration files
 
 Copyright (C) 2011, OCamlCore SARL
 

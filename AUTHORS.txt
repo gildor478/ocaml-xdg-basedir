@@ -1,8 +1,0 @@
-(* OASIS_START *)
-(* DO NOT EDIT (digest: ec9926ba32892d8f427c17e376208861) *)
-
-Authors of ocaml-xdg-basedir:
-
-* Sylvain Le Gall
-
-(* OASIS_STOP *)

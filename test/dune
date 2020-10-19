@@ -1,4 +1,4 @@
 (test
-  (name test)
-  (modules test)
-  (libraries xdg-basedir oUnit fileutils))
+ (name test)
+ (modules test)
+ (libraries xdg_basedir oUnit fileutils))

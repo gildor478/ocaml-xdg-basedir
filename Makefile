@@ -1,6 +1,4 @@
-# Default dune targets.
-#
-default: test
+default: build
 
 build:
 	dune build
@@ -14,9 +12,7 @@ doc:
 clean:
 	dune clean
 
-distclean: clean
-
-.PHONY: build test clean distclean doc
+.PHONY: build test clean doc
 
 # Deploy doc to website.
 #
