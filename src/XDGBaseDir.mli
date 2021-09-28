@@ -27,7 +27,7 @@
     also allows to store files in several places (i.e. system directories).
 
     @author Sylvain Le Gall
-    @see <http://standards.freedesktop.org/basedir-spec/basedir-spec-latest.html> 
+    @see <https://standards.freedesktop.org/basedir-spec/basedir-spec-latest.html>
          XDG base specification
   *)
 
