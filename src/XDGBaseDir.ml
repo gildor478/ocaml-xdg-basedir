@@ -39,18 +39,19 @@ type t =
       cache_home:  dirname;
     }
 
-let default = 
-  let getenv ?(default=fun () -> raise Not_found) var =
-    try 
-      Sys.getenv var 
-
+let default =
+  let not_found default var =
+    try
+      default ()
     with Not_found ->
-      begin
-        try 
-          default () 
-        with Not_found ->
-          failwith (Printf.sprintf "Environment variable '%s' not defined" var)
-      end
+      failwith (Printf.sprintf "Environment variable '%s' not defined" var)
+  in
+
+  let getenv ?(default=fun () -> raise Not_found) var =
+    match Sys.getenv var with
+    | exception Not_found -> not_found default var
+    | "" -> not_found default var
+    | var -> var
   in
 
   let home = 
