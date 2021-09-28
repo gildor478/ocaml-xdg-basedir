@@ -2,7 +2,6 @@
 (name xdg-basedir)
 
 (generate_opam_files true)
-(formatting disabled)
 
 (source (github gildor478/ocaml-xdg-basedir))
 (license "LGPL-2.1-only with OCaml-LGPL-linking-exception")
