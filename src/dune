@@ -1,6 +1,4 @@
 (library
-  (name xdgbasedir)
-  (public_name xdg-basedir)
-  (modules XDGBaseDir)
-  (wrapped false)
-  (libraries fileutils unix))
+ (name XDGBaseDir)
+ (public_name xdg-basedir)
+ (libraries fileutils unix))
