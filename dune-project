@@ -4,7 +4,7 @@
 (generate_opam_files true)
 
 (source (github gildor478/ocaml-xdg-basedir))
-(license "LGPL-2.1-only with OCaml-LGPL-linking-exception")
+(license "LGPL-2.1-or-later WITH OCaml-LGPL-linking-exception")
 (authors "Sylvain Le Gall")
 (maintainers "Sylvain Le Gall <sylvain@le-gall.net>")
 
