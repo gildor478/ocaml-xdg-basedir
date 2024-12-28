@@ -3,11 +3,13 @@ XDG basedir location for data/cache/configuration files
 
 [![OCaml-CI Build Status](https://img.shields.io/endpoint?url=https://ci.ocamllabs.io/badge/gildor478/ocaml-xdg-basedir/master&logo=ocaml)](https://ci.ocamllabs.io/github/gildor478/ocaml-xdg-basedir)
 
-Note: this library hasn't received a lot of udpates recently and is kept mostly
-for backward compatibility. The original author is not planning to add features
-or make significant update. There is an alternative ocamlpro/directories which
-is a more complete alternative to this library, it notably supports the
-windows standard.
+> [!NOTE]
+> This library hasn't received a lot of udpates recently and is kept mostly
+> for backward compatibility. The original author is not planning to add features
+> or make significant updates. There is an alternative
+> [Directories](https://github.com/OCamlPro/directories) which
+> is a more complete alternative to this library, it notably supports the
+> windows standard.
 
 This library implements the xdg-basedir specification. It helps to define
 standard locations for configuration, cache and data files in the user
