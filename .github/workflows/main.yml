@@ -16,8 +16,6 @@ jobs:
           - macos-latest
           - ubuntu-latest
           - windows-latest
-        ocaml-compiler:
-          - 4.13.x
 
     runs-on: ${{ matrix.os }}
 
@@ -28,7 +26,7 @@ jobs:
       - name: Use OCaml ${{ matrix.ocaml-compiler }}
         uses: ocaml/setup-ocaml@v3
         with:
-          ocaml-compiler: ${{ matrix.ocaml-compiler }}
+          ocaml-compiler: 5
 
       - run: opam install . --deps-only --with-test
 
